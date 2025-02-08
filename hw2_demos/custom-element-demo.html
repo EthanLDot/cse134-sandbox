@@ -4,6 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Alert Demo</title>
+    <style>
+      my-alert {
+        display: block;
+        padding: 16px;
+        border-radius: 8px;
+        border: 2px dashed #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 16px 0;
+        text-align: center;
+        width: 40vw;
+      }
+      my-alert[danger-level="high"] {
+        background-color: #ff4d4f; /* Red */
+        color: #fff;
+      }
+      my-alert[danger-level="medium"] {
+        background-color: yellow; /* Red */
+        color: #fff;
+      }
+      my-alert[danger-level="low"] {
+        background-color: green; /* Red */
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <my-alert danger-level="high">We’re gonna need a bigger boat.</my-alert>

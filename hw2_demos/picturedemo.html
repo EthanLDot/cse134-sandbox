@@ -17,14 +17,18 @@ Saving bandwidth and speeding page load times by loading the most appropriate im
     <!-- https://caniuse.com/avif -->
     <h1>Simple Demo for Picture Element</h1>
     <p>Lorem ipsum dolor sit amet</p>
-    <img
+    <!-- <img
       src="media/small_car.jpg"
       width="300px"
       height="200px"
       alt="A small car for a small page"
-    />
+    /> -->
     <!-- <picture>
-      <source srcset="media/large_car.jpg" media="(min-width: 700px)" type="image/jpg"  />
+      <source
+        srcset="media/large_car.jpg"
+        media="(min-width: 700px)"
+        type="image/jpg"
+      />
       <img
         src="media/small_car.jpg"
         width="300px"
@@ -32,9 +36,17 @@ Saving bandwidth and speeding page load times by loading the most appropriate im
         alt="A small car for a small page"
       />
     </picture> -->
-    <!-- <picture>
-      <source srcset="media/large_car.avif" media="(min-width: 700px)" type="image/avif" />
-      <source srcset="media/large_car.jpg" media="(min-width: 700px)" type="image/jpg" />
+    <picture>
+      <source
+        srcset="media/large_car.avif"
+        media="(min-width: 700px)"
+        type="image/avif"
+      />
+      <source
+        srcset="media/large_car.jpg"
+        media="(min-width: 700px)"
+        type="image/jpg"
+      />
       <source srcset="media/small_car.avif" />
       <img
         src="media/small_car.jpg"
@@ -42,6 +54,6 @@ Saving bandwidth and speeding page load times by loading the most appropriate im
         height="200px"
         alt="A small car for a small page"
       />
-    </picture> -->
+    </picture>
   </body>
 </html>
