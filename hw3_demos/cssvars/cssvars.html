@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables Demo</title>
+    <style>
+      :root {
+        --razzmatazz: #f61067ff;
+        --rebecca-purple: #5e239dff;
+        --aquamarine: rgb(
+          230,
+          0,
+          203
+        ); /*manually changed this due to poor contrast. Check for readability*/
+        --aquamarine-2: #6decafff;
+        --baby-powder: #f4f4edff;
+        --primary-font: "Lucida Sans", "madeupfont", "Chiller", "Arial",
+          sans-serif;
+      }
+
+      body {
+        font-family: var(--primary-font);
+        background-color: var(--baby-powder);
+        color: var(--rebecca-purple);
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: var(--razzmatazz);
+      }
+
+      p {
+        background-color: var(--aquamarine-2);
+        padding: 10px;
+        display: inline-block;
+        border-radius: 5px;
+      }
+
+      .highlight {
+        color: var(--aquamarine);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All About Cupcakes</h1>
+    <p>
+      Cupcakes are a delightful treat enjoyed by people of all ages. These
+      small, individual cakes come in a variety of flavors and toppings, making
+      them perfect for any occasion.
+    </p>
+    <p>
+      The history of cupcakes dates back to the 19th century, where they were
+      originally baked in small cups, hence the name "cupcake." Over time, they
+      evolved into the delicious frosted delights we know today.
+    </p>
+    <p>
+      Common cupcake flavors include <span class="highlight">vanilla</span>,
+      <span class="highlight">chocolate</span>,
+      <span class="highlight">red velvet</span>, and
+      <span class="highlight">lemon</span>. They can be topped with a variety of
+      frostings, such as buttercream, cream cheese, or ganache.
+    </p>
+    <p>
+      Whether enjoyed at a birthday party or as a simple indulgence, cupcakes
+      continue to bring joy to dessert lovers around the world!
+    </p>
+  </body>
+</html>

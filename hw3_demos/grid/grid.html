@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Demo</title>
+  </head>
+  <body>
+    <!-- To help with this, I strongly recommend using https://cssgrid-generator.netlify.app/ -->
+    <style>
+      body {
+        margin: 0;
+      }
+      .parent {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%; /*eliminate the annoying scroll issue with repeat(5, 1fr);*/
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+
+      .div1 {
+        grid-area: 1 / 1 / 2 / 4;
+        background-color: red;
+      }
+      .div2 {
+        grid-area: 1 / 4 / 2 / 6;
+        background-color: orange;
+      }
+      .div3 {
+        grid-area: 2 / 1 / 4 / 3;
+        background-color: yellow;
+      }
+      .div4 {
+        grid-area: 2 / 3 / 5 / 6; /*1st and 3rd numbers for vertical, 2nd and 4th for horizontal*/
+        background-color: greenyellow;
+      }
+    </style>
+    <div class="parent">
+      <div class="div1">Div1</div>
+      <div class="div2">Div2</div>
+      <div class="div3">Div3</div>
+      <div class="div4">Div4</div>
+    </div>
+  </body>
+</html>

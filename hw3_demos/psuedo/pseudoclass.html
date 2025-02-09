@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclasses</title>
+  </head>
+  <body>
+    <style>
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: scale(1.1) rotate(0deg);
+        }
+        25% {
+          transform: scale(1.1) rotate(3deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(-3deg);
+        }
+        75% {
+          transform: scale(1.1) rotate(2deg);
+        }
+      }
+
+      #my-button {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+      }
+
+      #my-button:hover {
+        background-color: #f4db00;
+        transform: scale(1.1);
+        color: #000;
+      }
+
+      #my-button:active {
+        background-color: #006715;
+        color: #fff;
+        animation: wiggle 0.3s ease-in-out;
+      }
+
+      input:focus {
+        background-color: #3498db;
+        outline: none;
+      }
+      input:required {
+        border-width: 5px;
+      }
+      input:disabled {
+        background-color: red;
+        display: inline; /*change to none for demo*/
+      }
+    </style>
+    <img src="piggy.jpg" alt="Piggy Bank" width="100" /><br />
+
+    <h2>Free Money time</h2>
+    <form id="moneyForm">
+      <label for="name">Your name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+      <label for="name">How much do you want?:</label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        placeholder="Amount ($)"
+        disabled
+      />
+      <button type="submit" id="my-button">Give Me a Whole Lotta Money</button>
+    </form>
+  </body>
+</html>

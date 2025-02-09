@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox Demo</title>
+  </head>
+  <body>
+    <!-- Giving credit where credit's due: https://codepen.io/Akr-am/pen/ZEBYWyX -->
+    <style>
+      body {
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .header,
+      .footer {
+        flex: 0 0 50px; /*The item will not grow even if there is extra space in the flex container. it will always be 50px wide (or tall, depending on the flex direction).*/
+        background: #34495e;
+      }
+
+      .content-body {
+        flex: 1 1 auto;
+        /* makes the item flexible, allowing it to grow or shrink as needed 
+        while starting from its default (or content-defined) size. */
+        display: flex;
+        flex-direction: row;
+      }
+
+      .content-body .content {
+        flex: 1 1 auto;
+        background-color: #1abc9c;
+      }
+      .content-body .sidenav,
+      .content-body .ads {
+        flex: 0 0 100px;
+      }
+      .content-body .sidenav {
+        background: #e74c3c;
+      }
+      .content-body .ads {
+        background: #e67e22;
+      }
+    </style>
+    <div class="container">
+      <header class="header">Header</header>
+      <div class="content-body">
+        <nav class="sidenav">Nav</nav>
+        <main class="content">Content</main>
+        <aside class="ads">Aside</aside>
+      </div>
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>

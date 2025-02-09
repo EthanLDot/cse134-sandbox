@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      *,
+      *::before,
+      *::after {
+        /* box-sizing: border-box; */
+      }
+
+      #foo::before {
+        content: "This is cool";
+        display: block;
+        background-color: white;
+      }
+
+      #foo::after {
+        /* You CANNOT do what I tried to do: see https://stackoverflow.com/questions/4505093/css-content-property-is-it-possible-to-insert-html-instead-of-text */
+        content: "<h1>This is NOT cool</h1>";
+        display: block;
+        background-color: white;
+      }
+      #foo {
+        background-color: red;
+        border: 5px;
+        /* You MUST have a border style for the border to affect the presentation. */
+        /* border-style: solid; */
+
+        padding: 10px 5px;
+        width: 100px;
+        /* box-sizing: border-box; */
+      }
+      #bar {
+        background-color: blue;
+        width: 110px;
+      }
+    </style>
+    <div id="foo">abcdefg</div>
+    <div id="bar">hijklmnop</div>
+  </body>
+</html>

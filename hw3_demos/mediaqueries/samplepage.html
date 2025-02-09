@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox Demo</title>
+  </head>
+  <body>
+    <!-- Giving credit where credit's due: https://codepen.io/Akr-am/pen/ZEBYWyX -->
+    <style>
+      body {
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .header,
+      .footer {
+        flex: 0 0 50px; /*The item will not grow even if there is extra space in the flex container. it will always be 50px wide (or tall, depending on the flex direction).*/
+        /* background: #34495e; */
+        width: 100vw;
+        border: 5px solid black;
+      }
+
+      .content-body {
+        flex: 1 1 auto;
+        /* makes the item flexible, allowing it to grow or shrink as needed
+        while starting from its default (or content-defined) size. */
+        display: flex;
+        flex-direction: row;
+        border: 5px solid black;
+      }
+
+      .content-body .content {
+        flex: 1 1 auto;
+        /* background-color: #1abc9c; */
+      }
+      .content-body .sidenav,
+      .content-body .ads {
+        flex: 0 0 100px;
+        border: 5px solid black;
+      }
+      img {
+        width: 60%;
+      }
+
+      @media (max-width: 600px) {
+        .content-body {
+          flex-direction: column; /* Stack items vertically */
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        body {
+          background: #c0c0c0;
+          color: black;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #34495e;
+          color: white;
+        }
+
+        /* Added this in just because the contrast on the anchors was terrible */
+        a {
+          color: rgb(121, 179, 255);
+        }
+      }
+    </style>
+    <div class="container">
+      <header class="header">
+        <h1>Australian Silky Terriers</h1>
+        <p>A small, elegant, and playful breed of dog with a big personality</p>
+        <!-- Image placeholder -->
+        <img
+          src="https://www.dogster.com/wp-content/uploads/2024/02/Silky-terrier-surrounded-by-spring-flowers_jaana-eleftheriou_Shutterstock.jpeg"
+          alt="Australian Silky Terrier"
+          width="600"
+          height="400"
+        />
+      </header>
+      <div class="content-body">
+        <nav class="sidenav">
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#care">Care and Maintenance</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#health">Health</a></li>
+            <li><a href="#training">Training</a></li>
+          </ul>
+        </nav>
+        <main class="content">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>
+              The Australian Silky Terrier is a small dog breed known for its
+              long, fine, and silky coat. They are active, alert, and often
+              described as having a big personality in a small body. Typically,
+              they weigh between 8 to 10 pounds and stand around 10 to 11 inches
+              tall at the shoulder.
+            </p>
+            <!-- Image placeholder -->
+            <img
+              src="https://georgiapuppiesfromheaven.com/dog-breed-photos/silkterr.jpg"
+              alt="Silky Terrier Overview"
+              width="600"
+              height="400"
+            />
+          </section>
+
+          <section id="care">
+            <h2>Care and Maintenance</h2>
+            <p>
+              Silky Terriers require regular grooming to keep their coats
+              looking their best. Brushing should be done every other day to
+              avoid tangles and mats. Their ears and eyes should be cleaned
+              regularly, and their teeth should be brushed often.
+            </p>
+          </section>
+
+          <section id="history">
+            <h2>History</h2>
+            <p>
+              The Australian Silky Terrier originated in Australia in the late
+              19th century. The breed was developed by crossing the Australian
+              Terrier with the Yorkshire Terrier, aiming to produce a small yet
+              strong and agile terrier. They were initially bred for hunting
+              small game.
+            </p>
+          </section>
+
+          <section id="health">
+            <h2>Health</h2>
+            <p>
+              Silky Terriers are generally healthy dogs, but they can be prone
+              to certain health conditions, including patellar luxation, dental
+              issues, and heart problems. Regular check-ups and a balanced diet
+              can help maintain their well-being.
+            </p>
+          </section>
+
+          <section id="training">
+            <h2>Training</h2>
+            <p>
+              Silky Terriers are intelligent and quick learners, but they can
+              also be independent and stubborn. Early socialization and positive
+              reinforcement training are key to a well-behaved dog. They respond
+              well to short, consistent training sessions.
+            </p>
+          </section>
+        </main>
+        <aside class="ads">
+          <h3>Popular Dog Products</h3>
+          <ul>
+            <li><a href="#">Best Dog Food for Small Breeds</a></li>
+            <li><a href="#">Top-rated Grooming Tools</a></li>
+            <li><a href="#">Pet Insurance for Terriers</a></li>
+          </ul>
+        </aside>
+      </div>
+      <footer class="footer">
+        <p>&copy; 2025 Australian Silky Terrier Guide</p>
+        <p>For more information, visit our <a href="#">Contact Page</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
