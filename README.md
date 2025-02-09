@@ -21,3 +21,12 @@ Demonstrates `<ins>` and `<del>` elements.
 ### **hw2_demos/picturedemo.html**
 
 Demonstrates use of `<picture>` and `<source>` elements in the context of varying screen sizes and image types.
+
+
+## HW3 Demos
+- **boxmodel** - demonstrates basic usage of the CSS box model.
+- **cssvars** - demonstrates basic usgae of CSS variables
+- **flexbox** - includes sample "Holy Grail" layout and some code to test out basic flexbox properties.
+- **grid** - demonstrates basic usage of CSS grid
+- **media queries** - demonstrates basic usage of media queries
+- **pseudo** - demonstrates basic usage of Pseudoclasses
