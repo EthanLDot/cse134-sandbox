@@ -1,0 +1,12 @@
+npm create astro@latest
+cd {NAME_OF_ASTRO_PROJECT}
+npm run dev
+
+The pages directory contains the .astro pages that will be accessible when you spin up your server
+Your URLs during development will look something like:
+http://localhost:4321/about
+
+One quirk with Astro is that markdown files, as shown in pages/posts, can automatically be rendered in readable HTML.
+
+Overall, https://docs.astro.build/en/tutorial/0-introduction/ does an excellent and straightforward intro to using Astro, 
+though the quality of your Astro blog should be somewhat above what is presented here.
