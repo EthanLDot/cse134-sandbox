@@ -30,3 +30,8 @@ Demonstrates use of `<picture>` and `<source>` elements in the context of varyin
 - **grid** - demonstrates basic usage of CSS grid
 - **media queries** - demonstrates basic usage of media queries
 - **pseudo** - demonstrates basic usage of Pseudoclasses
+
+
+## HW4 Demos
+- **astro** - demo app for the Astro SSG, heavily based on [this tutorial](https://docs.astro.build/en/tutorial/0-introduction/)
+- **themes** - sample code to demonstrate implementation of binary color/page themes
