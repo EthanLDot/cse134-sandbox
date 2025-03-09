@@ -35,3 +35,10 @@ Demonstrates use of `<picture>` and `<source>` elements in the context of varyin
 ## HW4 Demos
 - **astro** - demo app for the Astro SSG, heavily based on [this tutorial](https://docs.astro.build/en/tutorial/0-introduction/)
 - **themes** - sample code to demonstrate implementation of binary color/page themes
+
+
+## HW5 Demos
+- **commit-msgs-menti** - for use in the mentimeter activity for commits.
+- **custom-compo-starter** - starter code to set up custom component/custom event
+- **custom-compo-expected** - expected result VISUALLY only (no component-related code to be seen here)
+- **02-event-delegation** - to help with building the custom event code, same as Prof. powell's demos
