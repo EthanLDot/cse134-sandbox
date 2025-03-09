@@ -1,0 +1,123 @@
+<!-- You can open this on live server to get an idea what we expect the final page to look like - no work or modification to be done here: -->
+<!-- Due to time constraints, I didn't bother adding the custom event but it should be easy to do. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Component Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        hgroup {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .simple-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: left;
+        }
+
+        .simple-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        hgroup .year {
+            font-size: 0.9rem;
+            color: #888;
+            margin: 10px;
+        }
+
+        hgroup .model {
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <hgroup>
+        <h1>Ethan's Personal Gallery</h1>
+        <p>Photos taken by Ethan</p>
+    </hgroup>
+
+    <div id="gallery">
+        <div class="simple-card">
+            <hgroup>
+                <p class="year">1970</p>
+                <h2 class="model">Ford Mustang</h2>
+            </hgroup>
+            <img src="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4557.jpg" alt="Ford Mustang">
+        </div>
+        <div class="simple-card">
+            <hgroup>
+                <p class="year">2009</p>
+                <h2 class="model">Pontiac Solstice</h2>
+            </hgroup>
+            <img src="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4846.jpg" alt="Pontiac Solstice">
+        </div>
+        <div class="simple-card">
+            <hgroup>
+                <p class="year">1988</p>
+                <h2 class="model">Buick Century</h2>
+            </hgroup>
+            <img src="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4823.jpg" alt="Buick Century">
+        </div>
+        <div class="simple-card">
+            <hgroup>
+                <p class="year">2010</p>
+                <h2 class="model">Cadillac CTS-V</h2>
+            </hgroup>
+            <img src="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4801.jpg" alt="Cadillac CTS-V">
+        </div>
+        <div class="simple-card">
+            <hgroup>
+                <p class="year">2015</p>
+                <h2 class="model">Lexus RC-F</h2>
+            </hgroup>
+            <img src="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4675.jpg" alt="Lexus RC-F">
+        </div>
+        <div class="simple-card">
+            <hgroup>
+                <p class="year">1998</p>
+                <h2 class="model">Suzuki Wagon R</h2>
+            </hgroup>
+            <img src="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4746.jpg" alt="Suzuki Wagon R">
+        </div>
+    </div>
+    </script>
+
+</body>
+
+</html>
